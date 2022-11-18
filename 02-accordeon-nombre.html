@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+  <head><script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
   </head>
   <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+    <div class="accordéon" x-data="{ open: 1 }">
+       <section><button{bouton $}+p>
+        <button @click="open = 1">menu</button>
+        <p x-show="open==1" x-transition.scale.origin.top>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
+        Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
+          </p>
+          </button>
+          </section>
+       <section><button{bouton $}+p>
+        <button @click="open = 2">menu</button>
+        <p x-show="open==2" x-transition.scale.origin.top>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
+        Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
+          </p>
+          </button>
+          </section>
+       <section><button{bouton $}+p>
+        <button @click="open = 3">menu</button>
+        <p x-show="open==3" x-transition.scale.origin.top>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
+        Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
+         </section>
+          </p>
+        </div>
   </body>
 </html>
