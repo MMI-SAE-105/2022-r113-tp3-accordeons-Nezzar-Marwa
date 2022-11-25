@@ -5,6 +5,117 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
+    <style>
+
+#accordeon {
+     /* pour que les éléments soient alignés horizontalement */
+     /* pour éviter les marges par défaut */
+     /* pour éviter les "padding" par défaut */
+}
+
+#accordeon li {
+     width: 107px;
+     overflow: hidden;
+     /* pour l'animation, transition sur width */
+     background-color: #eee;
+     list-style-type: none;
+     margin: 3px;
+     padding: 5px;
+     border-radius: 5px;
+}
+
+#accordeon li.actif {
+     width: 317px;
+}
+
+#accordeon li figure {
+     /* pour éviter les marges par défaut */
+     /* pour que les éléments soient alignés horizontalement */
+     /* largeur de l'élément intrérieur de 317px (= déplié) */
+}
+
+#accordeon li figure figcaption {
+     /* largeur du texte de 200px */
+     /* pour espacer le texte, padding de 10px */
+     /* pour que les éléments soient alignés verticalement */
+    
+     /* espace entre les éléments */
+}
+
+/* Sur tous les enfants de figcation */
+#accordeon li figure figcaption > * {
+     /* pour éviter les marges par défaut */
+     /* pour éviter les "padding" par défaut */
+}
+    </style>
+  </head>
+  
+  <body>
+  <h1>Accordéon</h1>
+  <ul id="accordeon">
+    <li>
+      <figure>
+        <img alt="src-picsum.photos" width="102" height="77" src="https://picsum.photos/id/237/200/300">
+        <figcaption>
+          <h3>Lorem ipsum dolor </h3>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Odit veniam animi debitis ipsa vitae officiis commodi quidem
+            et libero voluptatum itaque, perferendis aspernatur unde suscipit 
+            culpa? Quasi natus aliquam ducimus.</p>
+        </figcaption>
+      </figure>
+    </li>
+    <li class="actif">
+      <figure>
+        <img alt="src-picsum.photos" width="102" height="77" src="https://picsum.photos/id/237/200/300">
+        <figcaption>
+          <h3>Lorem ipsum dolor.</h3>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quo error rerum labore animi ipsum, recusandae repellendus 
+            aliquid consectetur. Assumenda in odio deserunt a iure minima 
+            esse magni nobis molestiae ex.</p>
+        </figcaption>
+      </figure>
+    </li>
+    <li>
+      <figure>
+        <img alt="src-picsum.photos" width="102" height="77" src="https://picsum.photos/id/237/200/300">
+        <figcaption>
+          <h3>Lorem ipsum dolor</h3>
+  
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Quo error rerum labore animi ipsum, recusandae repellendus 
+            aliquid consectetur. Assumenda in odio deserunt a iure minima 
+            esse magni nobis molestiae ex.</p>
+        </figcaption>
+      </figure>
+    </li>
+  </ul>
+  <script>
+    (function () {
+      "use strict";
+  
+      var listeLI = document.querySelectorAll('ul#accordeon>li');
+  
+  
+      function basculeClassActif() {
+        for (var i = 0; i < listeLI.length; i++) {
+          var unLi = listeLI[i];
+          unLi.classList.remove('actif');
+        }
+        this.classList.add('actif');
+      }
+  
+      for (var i = 0; i < listeLI.length; i++) {
+        var unLI = listeLI[i];
+        unLI.addEventListener("click", basculeClassActif);
+      }
+  
+    }());
+  
+  </script>
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
