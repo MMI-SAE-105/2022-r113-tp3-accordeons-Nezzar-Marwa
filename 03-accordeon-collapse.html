@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+  <head><!-- Alpine Plugins --><script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script><!-- Alpine Core -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,30 +14,32 @@
     <div class="accordéon" x-data="{ expanded: false  }">
        <section><button{bouton $}+p>
         <button @click="expanded = ! expanded">menu</button>
-        <p x-show="expanded" xcollapse>
+        <p x-show="expanded" x-collapse>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
         Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
           </p>
-          </button>
           </section>
+        </div>
+    <div class="accordéon" x-data="{ expanded: false  }">
        <section><button{bouton $}+p>
         <button @click="expanded = ! expanded">menu</button>
-        <p x-show="expanded" xcollapse>
+        <p x-show="expanded" x-collapse>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
         Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
           </p>
-          </button>
           </section>
+          </div>
+    <div class="accordéon" x-data="{ expanded: false  }">
        <section><button{bouton $}+p>
         <button @click="expanded = ! expanded">menu</button>
-        <p x-show="expanded" xcollapse>
+        <p x-show="expanded" x-collapse>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. 
         Natus commodi obcaecati a dolor, eaque animi sapiente facere aspernatur odio. 
         Facilis adipisci facere illum quod laudantium impedit maxime officia velit ipsam.
          </section>
           </p>
-        </div>
+          </div>
   </body>
 </html>
